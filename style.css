@@ -1,0 +1,20 @@
+.user-input {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  gap: 20px; /* gap has to change */
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.year::placeholder {
+  color: black;
+}
