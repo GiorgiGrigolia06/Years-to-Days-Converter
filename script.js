@@ -7,18 +7,31 @@ const submit = document.querySelector(".button");
 
 // Calculating the amount of days using user's input //
 submit.addEventListener("click", function () {
-  if (currentMonth < month.value) {
+  if (year.value === "" || month.value === "ENTER YOUR BIRTH MONTH") {
+    result.textContent =
+      "HMMM, LOOKS LIKE YOU FORGOT TO ENTER YOUR ANSWERS BELOW =)";
+    result.style.visibility = "visible";
+  } else if (year.value > currentYear) {
+    result.textContent = "YOU FROM FUTURE OR WHAT? :0";
+    result.style.visibility = "visible";
+  } else if (month.value > currentMonth && Number(year.value) === currentYear) {
+    result.textContent = "YOU FROM FUTURE OR WHAT? :00";
+    result.style.visibility = "visible";
+  } else if (currentMonth < month.value) {
     result.textContent = `YOU ARE ${Math.trunc(
       (currentYear - year.value) * 365.25 - (month.value - currentMonth) * 30
-    )} DAYS OLD`;
+    )} DAYS OLD! FEELING OLD, DON'T YA? :D`;
+    result.style.visibility = "visible";
   } else if (currentMonth > month.value) {
     result.textContent = `YOU ARE ${Math.trunc(
       (currentYear - year.value) * 365.25 + (currentMonth - month.value) * 30
-    )} DAYS OLD`;
+    )} DAYS OLD! FEELING OLD, DON'T YA? :D`;
+    result.style.visibility = "visible";
   } else {
     result.textContent = `YOU ARE ${Math.trunc(
       (currentYear - year.value) * 365.25
-    )} DAYS OLD`;
+    )} DAYS OLD! FEELING OLD, DON'T YA? :D`;
+    result.style.visibility = "visible";
   }
 });
 

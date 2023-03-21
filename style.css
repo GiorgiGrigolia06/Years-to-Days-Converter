@@ -82,5 +82,11 @@ input::-webkit-inner-spin-button {
 
 .result {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+  background-color: rgba(44, 217, 151, 1);
+  padding: 1rem;
+  border-radius: 1rem;
+  visibility: hidden;
 }
