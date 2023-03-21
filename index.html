@@ -5,37 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+    </style>
   </head>
   <body>
     <div class="user-input">
-      <label for="year">Year of your birth: </label>
-      <input
-        type="number"
-        name="year"
-        class="year"
-        id="year"
-        placeholder="Enter your birthyear"
-      />
-      <label for="month">Month of your birth: </label>
-      <select name="month" class="month" id="month">
-        <option selected hidden disabled>Pick a month</option>
-        <option value="1">January</option>
-        <option value="2">February</option>
-        <option value="3">March</option>
-        <option value="4">April</option>
-        <option value="5">May</option>
-        <option value="6">June</option>
-        <option value="7">July</option>
-        <option value="8">August</option>
-        <option value="9">September</option>
-        <option value="10">October</option>
-        <option value="11">November</option>
-        <option value="12">December</option>
-      </select>
+      <h2 class="result"></h2>
+      <div class="input-birthyear">
+        <label for="year">YEAR OF YOUR BIRTH</label>
+        <input
+          type="number"
+          name="year"
+          class="year"
+          id="year"
+          placeholder="ENTER YOUR BIRTHYEAR"
+        />
+      </div>
+      <div class="input-birthmonth">
+        <label for="month">MONTH OF YOUR BIRTH</label>
+        <select name="month" class="month" id="month">
+          <option selected hidden disabled>PICK A MONTH</option>
+          <option class="option-values" value="1">JANUARY</option>
+          <option class="option-values" value="2">FEBRUARY</option>
+          <option class="option-values" value="3">MARCH</option>
+          <option class="option-values" value="4">APRIL</option>
+          <option class="option-values" value="5">MAY</option>
+          <option class="option-values" value="6">JUNE</option>
+          <option class="option-values" value="7">JULY</option>
+          <option class="option-values" value="8">AUGUST</option>
+          <option class="option-values" value="9">SEPTEMBER</option>
+          <option class="option-values" value="10">OCTOBER</option>
+          <option class="option-values" value="11">NOVEMBER</option>
+          <option class="option-values" value="12">DECEMBER</option>
+        </select>
+      </div>
+      <button class="button" type="button">CALCULATE</button>
     </div>
-    <button class="button" type="button">Calculate</button>
-    <h2 class="result"></h2>
     <script src="script.js"></script>
   </body>
 </html>
