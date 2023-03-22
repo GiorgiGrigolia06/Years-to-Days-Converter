@@ -179,13 +179,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-@media only screen and (max-height: 425px) {
-  .user-input {
-    height: 80%;
-  }
-}
-
-@media only screen and (max-height: 399px) {
+@media only screen and (max-height: 450px) {
   .user-input {
     height: 100%;
   }
