@@ -8,30 +8,23 @@ const submit = document.querySelector(".button");
 // Calculating the amount of days using user's input //
 submit.addEventListener("click", function () {
   if (year.value === "" || month.value === "ENTER YOUR BIRTH MONTH") {
-    result.textContent =
-      "HMMM, LOOKS LIKE YOU FORGOT TO ENTER YOUR ANSWERS BELOW =)";
-    result.style.visibility = "visible";
+    result.innerHTML = "WHERE ARE YOUR ANSWERS? DID THEY JOIN THE CIRCUS?";
   } else if (year.value > currentYear) {
-    result.textContent = "YOU FROM FUTURE OR WHAT? :0";
-    result.style.visibility = "visible";
+    result.innerHTML = "YOU FROM FUTURE OR WHAT? :0";
   } else if (month.value > currentMonth && Number(year.value) === currentYear) {
-    result.textContent = "YOU FROM FUTURE OR WHAT? :00";
-    result.style.visibility = "visible";
+    result.innerHTML = "YOU FROM FUTURE OR WHAT? :00";
   } else if (currentMonth < month.value) {
-    result.textContent = `YOU ARE ${Math.trunc(
+    result.innerHTML = `WOWZA, YOU'VE BEEN AROUND FOR A WHOPPING <span class="highlight">${Math.trunc(
       (currentYear - year.value) * 365.25 - (month.value - currentMonth) * 30
-    )} DAYS OLD! FEELING OLD, DON'T YA? :D`;
-    result.style.visibility = "visible";
+    )} DAYS!</span> FEELING LIKE A WISE OLD OWL YET? :D`;
   } else if (currentMonth > month.value) {
-    result.textContent = `YOU ARE ${Math.trunc(
+    result.innerHTML = `WOWZA, YOU'VE BEEN AROUND FOR A WHOPPING <span class="highlight">${Math.trunc(
       (currentYear - year.value) * 365.25 + (currentMonth - month.value) * 30
-    )} DAYS OLD! FEELING OLD, DON'T YA? :D`;
-    result.style.visibility = "visible";
+    )} DAYS!</span> FEELING LIKE A WISE OLD OWL YET? :D`;
   } else {
-    result.textContent = `YOU ARE ${Math.trunc(
+    result.innerHTML = `WOWZA, YOU'VE BEEN AROUND FOR A WHOPPING <span class="highlight">${Math.trunc(
       (currentYear - year.value) * 365.25
-    )} DAYS OLD! FEELING OLD, DON'T YA? :D`;
-    result.style.visibility = "visible";
+    )} DAYS!</span> FEELING LIKE A WISE OLD OWL YET? :D`;
   }
 });
 
